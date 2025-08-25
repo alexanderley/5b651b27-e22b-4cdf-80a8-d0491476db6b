@@ -1,12 +1,13 @@
+import React from "react";
 import Comments from "./components/Comments/Comments";
 import "./App.css";
 
-function App() {
+const App: React.FC = () => {
   return (
     <>
-      <Comments></Comments>
+      <Comments />
     </>
   );
-}
+};
 
 export default App;
