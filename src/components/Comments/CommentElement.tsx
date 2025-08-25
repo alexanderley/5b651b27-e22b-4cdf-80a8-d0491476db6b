@@ -1,6 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import type { FC } from "react";
 import { addComment, deleteComment } from "../../db/db";
-import CommentList from "./CommentList.js";
+import CommentList from "./CommentList";
 import styles from "./CommentElement.module.scss";
 
 import type { CommentElementProps } from "../../types/comments";
@@ -8,13 +9,13 @@ import type { CommentElementProps } from "../../types/comments";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
-export default function CommentElement({
+const CommentElement: FC<CommentElementProps> = ({
   comment,
   comments,
   setComments,
   level,
   currentUser,
-}: CommentElementProps) {
+}) => {
   const [replyingTo, setReplyingTo] = useState<string | null>(null);
   const [replyText, setReplyText] = useState<string>("");
 
@@ -97,7 +98,7 @@ export default function CommentElement({
           >
             Reply
           </button>
-          <button className="deleteButtonSolid" onClick={() => handleDelete()}>
+          <button className="deleteButtonSolid" onClick={handleDelete}>
             <FontAwesomeIcon icon={faTrash} />
           </button>
         </div>
@@ -112,4 +113,6 @@ export default function CommentElement({
       />
     </li>
   );
-}
+};
+
+export default CommentElement;

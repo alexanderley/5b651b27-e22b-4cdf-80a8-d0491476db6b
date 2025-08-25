@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import type { ChangeEvent, FormEvent } from "react";
+import React, { useEffect, useState } from "react";
+import type { FC, ChangeEvent, FormEvent } from "react";
 import { addComment, getComments, clearComments } from "../../db/db";
 import CommentList from "./CommentList";
 
@@ -7,9 +7,9 @@ import styles from "./Comments.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import type { Comment, AddCommentProps } from "../../types/comments.ts";
+import type { Comment, AddCommentProps } from "../../types/comments";
 
-const Comments = () => {
+const Comments: FC = () => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [form, setForm] = useState<string>("");
   const currentUser = "John Doe";
@@ -39,7 +39,7 @@ const Comments = () => {
       text: form,
       parentId: null,
       author: currentUser,
-    });
+    } as AddCommentProps);
 
     setComments((prev: Comment[]) => [...prev, newComment]);
     setForm("");

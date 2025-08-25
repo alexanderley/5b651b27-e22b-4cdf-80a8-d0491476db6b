@@ -1,9 +1,8 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import App from "./App"; // remove .js extension for TypeScript
+import App from "./App";
 
-// Ensure TypeScript knows root exists
 const container = document.getElementById("root");
 
 if (!container) {
