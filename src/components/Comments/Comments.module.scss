@@ -1,0 +1,18 @@
+.commentContainer {
+  width: 100%;
+  margin: 0 auto;
+  background-color: var(--light-dark);
+  margin: 20px;
+  border-radius: 20px;
+  padding: 20px;
+
+  .deleteAll {
+    background: var(--delete-red);
+    margin-bottom: 50px;
+  }
+
+  .commentForm {
+    display: flex;
+    gap: 10px;
+  }
+}
