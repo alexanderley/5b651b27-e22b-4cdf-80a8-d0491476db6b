@@ -1,6 +1,6 @@
 import type { FC } from "react";
-import CommentElement from "./CommentElement";
-import type { Comment, CommentListProps } from "../../types/comments.ts";
+import CommentElement from "../CommentElement/CommentElement";
+import type { Comment, CommentListProps } from "../../../types/comments";
 
 const CommentList: FC<CommentListProps> = ({
   comments,

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import type { FC } from "react";
-import { addComment, deleteComment } from "../../db/db";
-import CommentList from "./CommentList";
+import { addComment, deleteComment } from "../../../db/db";
+import CommentList from "../CommentList/CommentList";
 import styles from "./CommentElement.module.scss";
 
-import type { CommentElementProps } from "../../types/comments";
+import type { CommentElementProps } from "../../../types/comments";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";

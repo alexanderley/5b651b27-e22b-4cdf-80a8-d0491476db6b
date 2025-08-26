@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import type { FC, ChangeEvent, FormEvent } from "react";
-import { addComment, getComments, clearComments } from "../../db/db";
-import CommentList from "./CommentList";
+import { addComment, getComments, clearComments } from "../../../db/db";
+import CommentList from "../CommentList/CommentList";
 
 import styles from "./Comments.module.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import type { Comment, AddCommentProps } from "../../types/comments";
+import type { Comment, AddCommentProps } from "../../../types/comments";
 
 const Comments: FC = () => {
   const [comments, setComments] = useState<Comment[]>([]);
