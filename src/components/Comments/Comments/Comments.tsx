@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { FC, ChangeEvent, FormEvent } from "react";
 import { addComment, getComments, clearComments } from "../../../db/db";
 import CommentList from "../CommentList/CommentList";

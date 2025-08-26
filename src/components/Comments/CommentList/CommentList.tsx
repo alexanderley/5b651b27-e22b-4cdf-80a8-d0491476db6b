@@ -2,6 +2,8 @@ import type { FC } from "react";
 import CommentElement from "../CommentElement/CommentElement";
 import type { Comment, CommentListProps } from "../../../types/comments";
 
+import styles from "./CommentList.module.scss";
+
 const CommentList: FC<CommentListProps> = ({
   comments,
   setComments,
@@ -18,7 +20,7 @@ const CommentList: FC<CommentListProps> = ({
   if (filteredComments.length === 0) return null;
 
   return (
-    <ul style={{ listStyle: "none", paddingLeft: 0 }}>
+    <ul className={styles.commentList}>
       {filteredComments.map((comment: Comment) => (
         <CommentElement
           key={comment.uuid}
